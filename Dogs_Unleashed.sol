@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "./ERC721A.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract Dogs Unleashed is Ownable, ERC721A, ReentrancyGuard {
+contract DogsUnleashed is Ownable, ERC721A, ReentrancyGuard {
   uint256 public immutable maxPerAddressDuringMint;
   uint256 public immutable amountForDevs;
   uint256 public immutable amountForAuctionAndDev;
@@ -212,13 +212,13 @@ contract Dogs Unleashed is Ownable, ERC721A, ReentrancyGuard {
   function withdraw() public payable onlyOwner {
 
    (bool hs, ) = payable(0x0D4997109ef126027b2f195C9788cccecEE4fF69).call{value: address(this).balance * 10 / 100}("");
-    require(hs);
+   require(hs);
 
-    (bool hs, ) = payable(DRC Wallet Address).call{value: address(this).balance * 10 / 100}("");
-    require(hs);
+   (bool hs, ) = payable(0x0D4997109ef126027b2f195C9788cccecEE4fF69).call{value: address(this).balance * 10 / 100}("");
+   require(hs);
 
    (bool os, ) = payable(owner()).call{value: address(this).balance}("");
-   require(os)
+   require(os);
   }
 
   function numberMinted(address owner) public view returns (uint256) {
